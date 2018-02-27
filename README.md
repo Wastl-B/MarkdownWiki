@@ -15,7 +15,7 @@ Currently, there is only the template from the demo available, but I am planning
 - [Installation](#installation)
 - [Configuration](#configuration)
     + [MarkdownWiki config](#markdownwiki-config)
-    + [Defualt template](#defualt-template)
+    + [Default template](#defualt-template)
     + [Logos](#logos)
 - [Markdowns](#markdowns)
     + [Folder structure](#folder-structure)
@@ -64,7 +64,7 @@ virtualenv .venv
 | ```MARKDOWN_WIKI_RENDER_EXTENSIONS```         | default values are for nice code blocks, and headerids. |
 | ```MARKDOWN_WIKI_RENDER_CODE_STYLE```         | style for code blocks, based an well known [themes](https://help.farbox.com/pygments.html) |
 
-## Defualt template
+## Default template
 After a regular `git clone ...`, the directories `markdown_wiki/markdowns`, `markdown_wiki/static` and `markdown_wiki/templates/default` will be generated, but empty. To download the default template with the static files and some dummy markdowns for demonstration, which you can remove later, you have to initialize and update them:
 ```Bash
 git submodule init
