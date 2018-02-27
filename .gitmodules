@@ -1,0 +1,9 @@
+[submodule "markdown_wiki/templates/static"]
+	path = markdown_wiki/templates/static
+	url = https://gitlab.com/MarkdownWiki/Templates/ChocolateForrest/static.git
+[submodule "markdown_wiki/static"]
+	path = markdown_wiki/static
+	url = https://gitlab.com/MarkdownWiki/Templates/ChocolateForrest/static.git
+[submodule "markdown_wiki/templates/ChocolateForrest"]
+	path = markdown_wiki/templates/ChocolateForrest
+	url = https://gitlab.com/MarkdownWiki/Templates/ChocolateForrest/ChocolateForrest.git
