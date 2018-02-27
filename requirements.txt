@@ -1,0 +1,14 @@
+flask==0.12.2
+Jinja2==2.10 
+MarkupSafe==1.0 
+Werkzeug==0.14.1 
+click==6.7  
+itsdangerous==0.24
+
+WTForms==2.1 
+flask-wtf==0.14.2
+
+flask-flatpages==0.6
+Markdown==2.6.11 
+pygments==2.2.0
+PyYAML==3.12

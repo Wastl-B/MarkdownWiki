@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+.idea
+.vscode
+.venv/
+__pycache__/
+node_modules/
+shit.log
+
+MarkdownWiki.ini
+wsgi.py

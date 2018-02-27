@@ -1,0 +1,6 @@
+{% block content %}
+<form class="d-flex flex-row form-inline w-100 h-100 p-0 m-0 ml-lg-auto" style="display: inline;" action="{{ url_for('search') }}" method="post">
+    {{ g.search_form.hidden_tag() }}{{ g.search_form.search(class_="form-control form-control-dark col-10", id="searchbar", placeholder="Search for ...", size=20) }}
+    {{ g.search_form.submit(class_="btn form-control form-control-dark m-0 p-auto col-2", value="Search", id="searchbtn") }}
+</form>   
+{% endblock %}
