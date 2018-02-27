@@ -15,7 +15,7 @@ Currently, there is only the template from the demo available, but I am planning
 - [Installation](#installation)
 - [Configuration](#configuration)
     + [MarkdownWiki config](#markdownwiki-config)
-    + [Default template](#defualt-template)
+    + [Default template](#default-template)
     + [Logos](#logos)
 - [Markdowns](#markdowns)
     + [Folder structure](#folder-structure)

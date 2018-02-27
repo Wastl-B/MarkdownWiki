@@ -9,3 +9,7 @@ shit.log
 
 MarkdownWiki.ini
 wsgi.py
+
+markdowns/
+static/
+*/templates/default/
