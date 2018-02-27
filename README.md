@@ -62,6 +62,8 @@ pip install -r requirements.txt
 | ```MARKDOWN_WIKI_RENDER_EXTENSIONS```         | default values are for nice code blocks, and headerids. |
 | ```MARKDOWN_WIKI_RENDER_CODE_STYLE```         | style for code blocks, based an well known [themes](https://help.farbox.com/pygments.html) |
 
+## Defualt templates
+the default templates are provided as submodules. After a regular `git pull ...`, the directories `markdown_wiki/markdowns`, `markdown_wiki/static` and `markdown_wiki/templates/default` will be generated, but empty. 
 
 ## Logos
 In ```markdown_wiki/static/img/``` are two placeholder by [Octicons](https://octicons.github.com/). You can simply replace them but 
