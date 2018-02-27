@@ -46,10 +46,8 @@ pip install -r requirements.txt
 |                                               |               |
 |-----------------------------------------------|---------------|
 |  ```SECRET_KEY```                             | to generate secrets like tokens. Change here or in production set as environment variable. |
-| ```MARKDOWN_WIKI_FILE_EXTENSION```            | file extension. Change it, only if you use another extension. |
 | ```MARKDOWN_WIKI_ROOT```                      | the root markdown directory. You can keep them in the app folder, or anywhere else, just edit to your needs. |
-| ```MARKDOWN_WIKI_RENDER_EXTENSIONS```         | default values are for nice code blocks, and headerids. |
-| ```MARKDOWN_WIKI_RENDER_CODE_STYLE```         | style for code blocks, based an well known [themes](https://help.farbox.com/pygments.html) |
+| ```MARKDOWN_WIKI_FILE_EXTENSION```            | file extension. Change it, only if you use another extension. |
 | ```MARKDOWN_WIKI_EXCLUDED_FOLDERS```          | subfolders of ```MARKDOWN_WIKI_ROOT```, which should be excluded in the main (content) menu. |
 | ```MARKDOWN_WIKI_EXTRAPAGES_FOLDER```         | subfolder of ```MARKDOWN_WIKI_ROOT```, where you can place extra pages like impressum etc. |
 | ```MARKDOWN_WIKI_CONTENTMENU_ALPHABETIC```    | boolean, True if content menu should be in alphabetic order |
@@ -61,6 +59,8 @@ pip install -r requirements.txt
 | ```MARKDOWN_WIKI_TITLE```                     | string for an alternative title, will be shown on large screens as top menu entry for 'home', on smaller screens in navbar as alternative title. |
 | ```MARKDOWN_WIKI_EXTERNAL_LINK```             | Link for the navbar brand. |
 | ```MARKDOWN_WIKI_TEMPLATE```                  | template to use (as subfolder in ```templates/```). |
+| ```MARKDOWN_WIKI_RENDER_EXTENSIONS```         | default values are for nice code blocks, and headerids. |
+| ```MARKDOWN_WIKI_RENDER_CODE_STYLE```         | style for code blocks, based an well known [themes](https://help.farbox.com/pygments.html) |
 
 
 ## Logos
@@ -98,10 +98,14 @@ To link to another page you can use Markdown regular syntax
 ```Markdown
 [Networking](/networking)
 ``` 
-or to excluded files 
+to excluded files 
 ```Markdown
 [__SOLUTION__](/includes/solution)
-``` 
+```
+or to a heading on the same page:
+```Markdown
+[Starting the development server](#starting-the-development-server)
+```
 But if you want to link to a file from the ```static``` folder,
 like a picture for example, we mix both Markdown and Jinja 
 ```Markdown
