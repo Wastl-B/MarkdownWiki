@@ -92,7 +92,7 @@ The ```title``` provides the page title, menue entry and heading in the template
 a _datetime_ object, so the syntax is very important, so it can be treated as a typical Python _datetime_
 object in templates like ```{{ page.edited.strftime('%b %d %Y') }}```, which will result in ```Feb 20 2018``` .
 The author or editor is of course the ```by```. The ```order``` is a numerical value for a custom menu order.
-You can any meta values you like and call it in a template or order them by it.
+You can add any meta value you like and call it in a template or order them by it.
 ```yaml
 title: Home
 edited: 2018-02-20
