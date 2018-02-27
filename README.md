@@ -8,11 +8,14 @@ and want to maintain the content as markdown files. The Website will be generate
 
 I have also prepared this repo including some placeholder Markdowns as [Demo](https://markdownwiki.lymbycfyk.de).
 
+Currently, there is only the template from the demo available, but I am planning to publish more templates.
+
 # Table of content
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
     + [MarkdownWiki config](#markdownwiki-config)
+    + [Defualt template](#defualt-template)
     + [Logos](#logos)
 - [Markdowns](#markdowns)
     + [Folder structure](#folder-structure)
@@ -35,8 +38,7 @@ I have also prepared this repo including some placeholder Markdowns as [Demo](ht
 git clone git@github.com:lymbycfyk/MarkdownWiki.git
 cd MarkdownWiki
 virtualenv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+.venv/bin/pip install -r requirements.txt
 ```
 
 # Configuration
@@ -47,7 +49,7 @@ pip install -r requirements.txt
 |-----------------------------------------------|---------------|
 |  ```SECRET_KEY```                             | to generate secrets like tokens. Change here or in production set as environment variable. |
 | ```MARKDOWN_WIKI_ROOT```                      | the root markdown directory. You can keep them in the app folder, or anywhere else, just edit to your needs. |
-| ```MARKDOWN_WIKI_FILE_EXTENSION```            | file extension. Change it, only if you use another extension. |
+| ```MARKDOWN_WIKI_FILE_EXTENSION```            | file extension. Change it, only if you use another extension that `*.md`. |
 | ```MARKDOWN_WIKI_EXCLUDED_FOLDERS```          | subfolders of ```MARKDOWN_WIKI_ROOT```, which should be excluded in the main (content) menu. |
 | ```MARKDOWN_WIKI_EXTRAPAGES_FOLDER```         | subfolder of ```MARKDOWN_WIKI_ROOT```, where you can place extra pages like impressum etc. |
 | ```MARKDOWN_WIKI_CONTENTMENU_ALPHABETIC```    | boolean, True if content menu should be in alphabetic order |
@@ -62,8 +64,14 @@ pip install -r requirements.txt
 | ```MARKDOWN_WIKI_RENDER_EXTENSIONS```         | default values are for nice code blocks, and headerids. |
 | ```MARKDOWN_WIKI_RENDER_CODE_STYLE```         | style for code blocks, based an well known [themes](https://help.farbox.com/pygments.html) |
 
-## Defualt templates
-the default templates are provided as submodules. After a regular `git pull ...`, the directories `markdown_wiki/markdowns`, `markdown_wiki/static` and `markdown_wiki/templates/default` will be generated, but empty. 
+## Defualt template
+After a regular `git clone ...`, the directories `markdown_wiki/markdowns`, `markdown_wiki/static` and `markdown_wiki/templates/default` will be generated, but empty. To download the default template with the static files and some dummy markdowns for demonstration, which you can remove later, you have to initialize and update them:
+```Bash
+git submodule init
+git submodule update
+# and to remove the dummies
+rm -rfd markdown_wiki/markdowns/*
+```
 
 ## Logos
 In ```markdown_wiki/static/img/``` are two placeholder by [Octicons](https://octicons.github.com/). You can simply replace them but 
