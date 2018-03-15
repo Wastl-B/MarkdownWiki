@@ -8,7 +8,7 @@ and want to maintain the content as markdown files. The Website will be generate
 
 I have also prepared this repo including some placeholder Markdowns as [Demo](https://markdownwiki.lymbycfyk.de).
 
-Currently, there is only the template from the demo available, but I am planning to publish more templates.
+Currently, there is only the template from the demo available, but I am planning to publish more templates. These Templates are hostet on [Gitlab](https://gitlab.com/MarkdownWiki/Templates).
 
 # Table of content
 - [Requirements](#requirements)
