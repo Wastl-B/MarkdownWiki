@@ -52,11 +52,9 @@ virtualenv .venv
 | ```MARKDOWN_WIKI_FILE_EXTENSION```            | file extension. Change it, only if you use another extension that `*.md`. |
 | ```MARKDOWN_WIKI_EXCLUDED_FOLDERS```          | subfolders of ```MARKDOWN_WIKI_ROOT```, which should be excluded in the main (content) menu. |
 | ```MARKDOWN_WIKI_EXTRAPAGES_FOLDER```         | subfolder of ```MARKDOWN_WIKI_ROOT```, where you can place extra pages like impressum etc. |
-| ```MARKDOWN_WIKI_CONTENTMENU_ALPHABETIC```    | boolean, True if content menu should be in alphabetic order |
-| ```MARKDOWN_WIKI_CONTENTMENU_ALTORDER```      | string, key from _metadata_ as the alternative order |
-| ```MARKDOWN_WIKI_EXTRTAMENU_ALPHABETIC```     | boolean, True if extra menu for ```EXTRAPAGES``` should be in alphabetic order |
-| ```MARKDOWN_WIKI_EXTRTAMENU_ALTORDER```       | string, key from _metadata_ as the alternative order |
-| ```MARKDOWN_WIKI_SEARCH_EXCLUDE_STRING```     | chars, which should be excluded in search preview, due to text search. |
+| ```MARKDOWN_WIKI_CONTENTMENU_ORDER```         | string, key from *metadata* for the menu order |
+| ```MARKDOWN_WIKI_EXTRTAMENU_ORDER```          | string, key from *metadata* for the menu order  |
+| ```MARKDOWN_WIKI_SEARCH_EXCLUDE_STRING```     | chars, which should be excluded in search, due to text search. Read [Markdown File layout](#file-layout) for more information |
 | ```MARKDOWN_WIKI_BRAND```                     | string for navbar title nexto the logo. |
 | ```MARKDOWN_WIKI_TITLE```                     | string for an alternative title, will be shown on large screens as top menu entry for 'home', on smaller screens in navbar as alternative title. |
 | ```MARKDOWN_WIKI_EXTERNAL_LINK```             | Link for the navbar brand. |
@@ -102,6 +100,8 @@ order: 100
 # Welcome to this Wiki
 ...
 ```
+
+For a safe search functionality, you should use the asterisks instead of underscores, to be able to exclude one character in the search
 
 ## Links
 To link to another page you can use Markdown regular syntax 

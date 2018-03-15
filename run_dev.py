@@ -10,7 +10,7 @@ import getopt
 def main(argv):
     ip = '127.0.0.1'
     port = 5000
-    debug = False
+    debug = True
     try:
         opts, args = getopt.getopt(argv, 'hi:p:d', ['ip=', 'port=', 'debug='])
     except getopt.GetoptError:

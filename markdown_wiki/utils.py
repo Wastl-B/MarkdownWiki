@@ -4,10 +4,8 @@ here is space for some little helpers like the search function and the menu gene
 from markdown_wiki.config import MARKDOWN_WIKI_EXCLUDED_FOLDERS
 from markdown_wiki.config import MARKDOWN_WIKI_EXTRAPAGES_FOLDER
 from markdown_wiki.config import MARKDOWN_WIKI_SEARCH_EXCLUDE_STRING
-from markdown_wiki.config import MARKDOWN_WIKI_CONTENTMENU_ALPHABETIC
-from markdown_wiki.config import MARKDOWN_WIKI_EXTRTAMENU_ALPHABETIC
-from markdown_wiki.config import MARKDOWN_WIKI_CONTENTMENU_ALTORDER
-from markdown_wiki.config import MARKDOWN_WIKI_EXTRTAMENU_ALTORDER
+from markdown_wiki.config import MARKDOWN_WIKI_CONTENTMENU_ORDER
+from markdown_wiki.config import MARKDOWN_WIKI_EXTRTAMENU_ORDER
 from markdown_wiki.config import MARKDOWN_WIKI_BRAND
 from markdown_wiki.config import MARKDOWN_WIKI_TITLE
 from markdown_wiki.config import MARKDOWN_WIKI_EXTERNAL_LINK
@@ -22,17 +20,17 @@ MARKDOWN_WIKI_CONTEXT = {
     }
 
 
-def get_menu(*arg):
+def get_menu(*args):
     """
     gathers all markdown files, which are not in 'FLATPAGES_EXCLUDE_FOLDERS' and 'MARKDOWN_WIKI_EXTRAPAGES_FOLDER' 
     for the main content menu generation, orderd based on 'MARKDOWN_WIKI_CONTENTMENU_ALPHABETIC'
     :return: pages for the menu
     """
     menu_entries = [p for p in PAGES if not any(exclude in p.path for exclude in MARKDOWN_WIKI_EXCLUDED_FOLDERS + MARKDOWN_WIKI_EXTRAPAGES_FOLDER)]
-    if MARKDOWN_WIKI_CONTENTMENU_ALPHABETIC:
-        return sorted(menu_entries, key=lambda p: p.path)
-    else:
-        return sorted(menu_entries, key=lambda p: p[MARKDOWN_WIKI_CONTENTMENU_ALTORDER])
+    #if MARKDOWN_WIKI_CONTENTMENU_ALPHABETIC:
+    #    return sorted(menu_entries, key=lambda p: p.path)
+    #else:
+    return sorted(menu_entries, key=lambda p: p[MARKDOWN_WIKI_CONTENTMENU_ORDER])
 
 def get_extra_pages():
     """
@@ -42,10 +40,10 @@ def get_extra_pages():
     """
     pages = [p for p in PAGES if any(exclude in p.path for exclude in MARKDOWN_WIKI_EXTRAPAGES_FOLDER)]
     
-    if MARKDOWN_WIKI_EXTRTAMENU_ALPHABETIC:
-        return sorted(pages, key=lambda p: p.path)
-    else:
-        return sorted(pages, key=lambda p: p[MARKDOWN_WIKI_EXTRTAMENU_ALTORDER])
+    #if MARKDOWN_WIKI_EXTRTAMENU_ALPHABETIC:
+    #    return sorted(pages, key=lambda p: p.path)
+    #else:
+    return sorted(pages, key=lambda p: p[MARKDOWN_WIKI_EXTRTAMENU_ORDER])
 
 
 def search_files(query):
@@ -57,7 +55,7 @@ def search_files(query):
     """
     results = list()
     for p in PAGES:
-        for line in p.body.splitlines():
+        for line in p.body.splitlines():         # to exclude code language
             if query.lower() in line.lower() and '```' not in line:
                 for char in MARKDOWN_WIKI_SEARCH_EXCLUDE_STRING:
                     line = line.replace(char, '')
