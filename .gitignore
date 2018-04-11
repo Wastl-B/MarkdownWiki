@@ -6,6 +6,7 @@ __pycache__
 __pycache__/
 node_modules/
 
+# server specific wsgi files for deployment
 MarkdownWiki.ini
 wsgi.py
 

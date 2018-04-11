@@ -1,4 +1,4 @@
-## _This page, as well as the project, are in development..._
+# MarkdownWiki
 
 **MarkdownWiki** aims to be a quick and easy solution if you need to host some information like a documentation or a small wiki
 and want to maintain the content as markdown files. The Website will be generated, based on your Markdown files and subfolders.
