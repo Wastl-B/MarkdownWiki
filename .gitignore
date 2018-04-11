@@ -5,11 +5,7 @@ __pycache__
 .venv/
 __pycache__/
 node_modules/
-shit.log
 
 MarkdownWiki.ini
 wsgi.py
 
-markdowns/
-static/
-*/templates/default/

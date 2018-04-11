@@ -87,7 +87,7 @@ def search_results(query):
 @MarkdownWiki.before_request
 def before_request():
     """
-    instantiates a search form in Flask's g (lobal)
+    instantiates a search form in Flask's g(lobal)
     """
     g.search_form = forms.SearchForm()
 

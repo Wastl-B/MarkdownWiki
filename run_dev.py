@@ -9,7 +9,7 @@ import getopt
 
 def main(argv):
     ip = '127.0.0.1'
-    port = 5000
+    port = 8080
     debug = True
     try:
         opts, args = getopt.getopt(argv, 'hi:p:d', ['ip=', 'port=', 'debug='])
