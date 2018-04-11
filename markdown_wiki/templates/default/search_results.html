@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Suchergebnisse für "{{ query }}":</h1>
+  {% if results %}
+    {% for result in results %}
+        <p>
+          {{ result.LINE }}
+        </p>
+        <strong>gefunden in <a href="/{{ result.PATH }}">"{{ result.TITLE }}"</a></strong>
+        <hr>
+    {% endfor %}
+  {% else %}
+    <h3>Nothing found.</h3>
+  {% endif %}
+{% endblock %}
