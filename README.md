@@ -36,7 +36,7 @@ I have also prepared this repo including some placeholder Markdowns as [Demo](ht
 # Installation
 
 ```Bash
-git clone git@github.com:lymbycfyk/MarkdownWiki.git
+git clone git@github.com:Wastl-B/MarkdownWiki.git
 cd MarkdownWiki
 virtualenv .venv
 .venv/bin/pip install -r requirements.txt
