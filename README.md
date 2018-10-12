@@ -6,8 +6,6 @@ and want to maintain the content as markdown files. The Website will be generate
 **MarkdownWiki** is build with [Flask](http://flask.pocoo.org/), [Flask-FlatPages](http://flask-flatpages.readthedocs.io/en/latest/)
 & [Bootstrap 4](http://getbootstrap.com/docs/).
 
-I have also prepared this repo including some placeholder Markdowns as [Demo](https://markdownwiki.wastl-b.de/).
-
 # Table of content
 
 * [Requirements](#requirements)
